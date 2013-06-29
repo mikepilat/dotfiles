@@ -1,0 +1,12 @@
+[alias]
+  ci = commit
+  civ = commit -v
+  co = checkout
+  lc = log ORIG_HEAD.. --stat --no-merges
+  st = status
+  staged = diff --staged
+[color]
+  ui = true
+[user]
+  name = "Michael Pilat"
+  email = "mike@mikepilat.com"
