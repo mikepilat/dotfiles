@@ -80,6 +80,7 @@ export CLICOLOR=1
 export LSCOLORS=Gxfxbxdxcxegedabagacad
 
 alias ls="ls -alh"
+alias t="task long"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 

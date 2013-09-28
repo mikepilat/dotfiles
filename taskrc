@@ -1,0 +1,6 @@
+include /usr/local/Cellar/task/2.2.0/share/doc/task/rc/dark-256.theme
+include /usr/local/Cellar/task/2.2.0/share/doc/task/rc/holidays.en-US.rc
+
+data.location=~/.task
+
+color=on
