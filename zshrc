@@ -76,9 +76,10 @@ simple_git_prompt_info() {
 export PROMPT='%{$fg_bold[blue]%}%n%{$reset_color%}@%{$fg[blue]%}%M %{$fg[green]%}%~%{$fg_bold[green]%}%% %{$reset_color%}'
 export RPROMPT='$(git_prompt_info)%{$reset_color%}'
 
+export CLICOLOR=1
 export LSCOLORS=Gxfxbxdxcxegedabagacad
 
-alias ls="ls -alh --color"
+alias ls="ls -alh"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
