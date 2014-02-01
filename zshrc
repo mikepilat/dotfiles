@@ -89,3 +89,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 source /usr/local/Cellar/rbenv/0.4.0/completions/rbenv.zsh
 
 export GOPATH=~/.go
+
+export VISUAL=vim
+export EDITOR=vim
