@@ -87,3 +87,5 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 source /usr/local/Cellar/rbenv/0.4.0/completions/rbenv.zsh
+
+export GOPATH=~/.go
