@@ -92,3 +92,7 @@ export GOPATH=~/.go
 
 export VISUAL=vim
 export EDITOR=vim
+
+bindkey '^R' history-incremental-pattern-search-backward
+bindkey '^N' vi-up-line-or-history
+bindkey '^P' vi-down-line-or-history
