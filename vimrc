@@ -20,3 +20,10 @@ map <LEADER>nt :NERDTreeToggle<CR>
 map <LEADER>tl :TlistToggle<CR>
 let Tlist_Use_Right_Window = 1
 let Tlist_WinWidth = 60
+
+" unite
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+let g:unite_winheight = 10
+let g:unite_prompt = '» '
+nnoremap <silent> <C-p> :Unite -silent -start-insert file_rec/async<cr>
+nnoremap <silent> <space>b :Unite -silent -start-insert buffer<cr>
