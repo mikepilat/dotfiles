@@ -1,3 +1,11 @@
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+
+setopt nomatch
+unsetopt autocd beep
+bindkey -e
+
 autoload -U compinit && compinit
 autoload -U colors && colors
 
@@ -80,15 +88,6 @@ export CLICOLOR=1
 export LSCOLORS=Gxfxbxdxcxegedabagacad
 
 alias ls="ls -alh"
-alias t="task long"
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-source /usr/local/Cellar/rbenv/0.4.0/completions/rbenv.zsh
-
-export GOPATH=~/.go
 
 export VISUAL=vim
 export EDITOR=vim
