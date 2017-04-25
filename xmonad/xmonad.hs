@@ -21,10 +21,9 @@ main = do
       { ppOutput = hPutStrLn xmproc
       , ppTitle = xmobarColor "blue" "" . shorten 50
       }
-    , keys = myKeys
-	  }
+	  } `additionalKeys` myKeys
 
-myKeys (XConfig {modMask = mod4}) = M.fromList
+myKeys =
     [ ((0, xF86XK_AudioLowerVolume   ), spawn "amixer set Master 2-")
     , ((0, xF86XK_AudioRaiseVolume   ), spawn "amixer set Master 2+")
     , ((0, xF86XK_AudioMute          ), spawn "amixer set Master toggle") ]
