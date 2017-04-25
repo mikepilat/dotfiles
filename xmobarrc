@@ -1,0 +1,18 @@
+Config { font = "xft:DejaVu Sans Mono:size=8:bold:antialias=true"
+       , bgColor = "black"
+       , fgColor = "lightblue"
+       , position = TopW C 100 
+       , commands = [ Run Weather "KJOT" ["-t"," <tempF>°F","-L","64","-H","77","--normal","green","--high","red","--low","lightblue"] 36000
+                    , Run MultiCpu ["-L","3","-H","50","--normal","green","--high","red", "-t", "CPU <autototal>%", "-p", "3"] 10
+                    , Run CoreTemp ["-t", "Temp <core0>|<core1>|<core2>|<core3>°C", "-L", "40", "-H", "60", "-l", "lightblue", "-n", "yellow", "-h", "red"] 50
+                    , Run Memory ["-t","Mem <usedratio>%", "-l", "lightblue", "-p", "3"] 10
+                    , Run Network "net0" ["-S", "True", "-t", "Net ↑<tx> ↓<rx>", "-l", "lightblue", "-p", "3"] 10
+                    , Run Swap ["-l", "lightblue", "-p", "3", "-t", "Swap <usedratio>%"] 10
+                    , Run Date "%a %b %_d %l:%M" "date" 10
+                    , Run Com "/home/mpilat/.bin/xmobar_volume.sh" [] "volume" 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{  %net0% | %multicpu% | %coretemp% | %memory% | %swap% | Vol %volume%      %KJOT%    <fc=#ee9a00>%date%</fc>"
+       }
