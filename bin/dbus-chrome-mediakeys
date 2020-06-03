@@ -1,0 +1,4 @@
+#!/bin/bash
+
+instance=`dbus-send --print-reply --dest=org.freedesktop.DBus  /org/freedesktop/DBus org.freedesktop.DBus.ListNames | awk '{print $2}' | grep 'org.mpris.MediaPlayer2.chromium' | tr -d \"`
+dbus-send --print-reply --dest=$instance /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.$1 > /dev/null
