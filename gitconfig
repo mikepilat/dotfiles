@@ -12,3 +12,5 @@
 [user]
   name = "Michael Pilat"
   email = "mike@mikepilat.com"
+[pull]
+  ff = only
